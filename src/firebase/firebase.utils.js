@@ -1,4 +1,4 @@
-import firebase, { initializeApp } from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
@@ -43,5 +43,5 @@ export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt : 'select_account'});
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
+console.log(signInWithGoogle)
 export default firebase;
